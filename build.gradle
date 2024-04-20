@@ -70,8 +70,7 @@ dependencies {
     implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.4'
     implementation group: 'com.zaxxer', name: 'HikariCP', version: '5.0.1'
 
-    implementation 'org.mybatis.mybatis:3.5.9'
-    implementation 'org.mybatis.mybatis-spring:2.0.7'
+
 
     //JSTL
     implementation group: 'jstl', name: 'jstl', version: '1.2'
