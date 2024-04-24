@@ -6,7 +6,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.zerock.springex.domain.TodoVO;
 import org.zerock.springex.dto.TodoDTO;
-import org.zerock.springex.TodoMapper;
+import org.zerock.springex.mapper.TodoMapper;
 
 @Service
 @Log4j2

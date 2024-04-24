@@ -1,4 +1,4 @@
-package org.zerock.springex;
+package org.zerock.springex.mapper;
 
 import org.zerock.springex.domain.TodoVO;
 
