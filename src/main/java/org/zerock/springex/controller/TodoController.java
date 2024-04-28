@@ -56,5 +56,13 @@ public class TodoController {
 
     }
 
+    @GetMapping("/read")
+    public void read(Long tno, Model model) {
+
+        TodoDTO todoDTO = todoService.getOne(tno);
+        log.info(todoDTO);
+
+        model.addAttribute("dto", todoDTO);
+    }
 
 }
