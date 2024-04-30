@@ -56,7 +56,7 @@ public class TodoController {
 
     }
 
-    @GetMapping("/read")
+    @GetMapping({"/read","/modify"})
     public void read(Long tno, Model model) {
 
         TodoDTO todoDTO = todoService.getOne(tno);
