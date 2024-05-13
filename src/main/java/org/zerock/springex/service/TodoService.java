@@ -12,4 +12,6 @@ public interface TodoService {
     List<TodoDTO> getAll();
 
     TodoDTO getOne(long tno);
+
+    void remove(Long tno);
 }
