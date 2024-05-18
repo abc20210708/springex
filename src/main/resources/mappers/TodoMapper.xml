@@ -28,4 +28,8 @@
         update tbl_todo set title = #{title}, dueDate = #{dueDate}, finished = #{finished} where tno = #{tno}
     </update>
 
+    <select id="selectList" resultType="int">
+        select * from tbl_todo order by tno desc limit #{skip}, #{size}
+    </select>
+
 </mapper>
