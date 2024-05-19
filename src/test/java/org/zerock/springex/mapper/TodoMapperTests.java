@@ -65,7 +65,7 @@ public class TodoMapperTests {
 
         List<TodoVO> voList = todoMapper.selectList(pageRequestDTO);
 
-        voList.forEach(vo -> log.info(vo));
+        voList.forEach(vo -> log.info(Long.valueOf(vo.getTno())));
     }
 
 }
