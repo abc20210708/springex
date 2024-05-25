@@ -15,13 +15,6 @@
         <property name="suffix" value=".jsp"></property>
     </bean>
 
-    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
-        <property name="formatters">
-            <set>
-                <bean class="org.zerock.springex.controller.formatter.LocalDateFormatter"/>
-            </set>
-        </property>
-    </bean>
 
     <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
         <property name="formatters">
