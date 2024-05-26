@@ -80,6 +80,15 @@
                             </c:forEach>
                             </tbody>
                         </table>
+
+                        <div>
+                            <ul class="pagination flex-wrap">
+                                <c:forEach begin="${responseDTO.start}" end="${responseDTO.end}" var="num">
+                                    <li class="page-time"><a class="page-link" href="#">${num}</a></li>
+                                </c:forEach>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
             </div>
