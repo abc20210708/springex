@@ -83,9 +83,24 @@
 
                         <div>
                             <ul class="pagination flex-wrap">
+                                <c:if test="${responseDTO.prev}">
+                                    <li class="page-item">
+                                        <a class="page-link">Previous</a>
+                                    </li>
+                                </c:if>
+
+
+
                                 <c:forEach begin="${responseDTO.start}" end="${responseDTO.end}" var="num">
-                                    <li class="page-time"><a class="page-link" href="#">${num}</a></li>
+                                    <li class="page-time ${responseDTO.page == num? "active":""}"><a class="page-link" href="#">${num}</a></li>
                                 </c:forEach>
+
+                                <c:if test="${responseDTO.next}">
+                                    <li class="page-item">
+                                        <a class="page-link">Next</a>
+                                    </li>
+                                </c:if>
+
                             </ul>
                         </div>
 
