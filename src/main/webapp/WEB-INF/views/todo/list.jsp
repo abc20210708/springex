@@ -81,7 +81,7 @@
                             </tbody>
                         </table>
 
-                        <div>
+                        <div class="float-end">
                             <ul class="pagination flex-wrap">
                                 <c:if test="${responseDTO.prev}">
                                     <li class="page-item">
