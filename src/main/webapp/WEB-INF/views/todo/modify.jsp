@@ -125,7 +125,7 @@
 
                         const serverValidResult = {}
 
-                        <c:forEach items="#{errors}" var="error">
+                        <c:forEach items="${errors}" var="error">
 
                         serverValidResult['${error.getField()}'] = '${error.defaultMessage}'
 
@@ -138,7 +138,7 @@
                             e.preventDefault()
                             e.stopPropagation()
 
-                            self.location = "/todo/list";
+                            self.location = `/todo/list?${pageRequestDTO.link}`
                         }, false);
 
                     </script>
