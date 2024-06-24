@@ -79,7 +79,7 @@ public class TodoController {
 
         todoService.remove(tno);
 
-        redirectAttributes.addFlashAttribute("page", 1);
+        redirectAttributes.addFlashAttribute("page", pageRequestDTO.getPage());
         redirectAttributes.addFlashAttribute("size", pageRequestDTO.getSize());
 
         return "redirect:/todo/list";
