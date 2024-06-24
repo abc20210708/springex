@@ -65,7 +65,7 @@
                         <div class="input-group mb-3">
                             <span class="input-group-text">TNO</span>
                             <input type="text" name="tno" class="form-control"
-                            value='<c:out value="${dto.tno}"></c:out>' readonly>
+                            value=<c:out value="${dto.tno}"></c:out> readonly>
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Title</span>
@@ -75,14 +75,14 @@
 
                         <div class="input-group mb-3">
                             <span class="input-group-text">DueDate</span>
-                            <input type="text" name="dueDate" class="form-control"
-                                   value='<c:out value="${dto.dueDate}"></c:out>' >
+                            <input type="date" name="dueDate" class="form-control"
+                                   value=<c:out value="${dto.dueDate}"></c:out> >
                         </div>
 
                         <div class="input-group mb-3">
                             <span class="input-group-text">Writer</span>
                             <input type="text" name="writer" class="form-control"
-                                   value='<c:out value="${dto.writer}"></c:out>' readonly>
+                                   value=<c:out value="${dto.writer}"></c:out> readonly>
                         </div>
 
                         <div class="form-check">
@@ -103,6 +103,16 @@
                     </div>
 
                     <script>
+
+
+                        const serverValidResult = {}
+
+                        <c:forEach items="${errors}" var="error">
+
+                        serverValidResult['${error.getField()}'] = '${error.defaultMessage}'
+                        console.log(serverValidResult)
+
+                        </c:forEach>
 
                         const formObj = document.querySelector("form")
 
@@ -125,17 +135,6 @@
 
                             formObj.submit()
                         }, false);
-
-
-                        const serverValidResult = {}
-
-                        <c:forEach items="${errors}" var="error">
-
-                        serverValidResult['${error.getField()}'] = '${error.defaultMessage}'
-
-                        </c:forEach>
-
-                        console.log(serverValidResult)
 
                         document.querySelector(".btn-secondary").addEventListener("click", function (e) {
 
