@@ -81,11 +81,11 @@
                                    value=<c:out value="${dto.writer}"></c:out> readonly>
                         </div>
 
-                        <div class="list-group">
-                            <label class="list-group-item">
+                        <div class="form-check">
+                            <label class="form-check-label">
                                 Finished &nbsp;
                             </label>
-                            <input type="form-check-input me-1" type="checkbox" name="finished" ${dto.finished?"checked":""} disabled>
+                            <input type="form-check-input" type="checkbox" name="finished" ${dto.finished?"checked":""} disabled>
                         </div>
 
                         <div class="my-4">

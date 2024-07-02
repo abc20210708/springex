@@ -58,14 +58,14 @@
                     </div>
                     <div class="card-body">
                         <form action="/todo/modify" method="post">
-
+                            <input type="hidden" name="tno" value="${dto.tno}">
                             <input type="hidden" name="page" value="${pageRequestDTO.page}">
                             <input type="hidden" name="size" value="${pageRequestDTO.size}">
 
                         <div class="input-group mb-3">
                             <span class="input-group-text">TNO</span>
                             <input type="text" name="tno" class="form-control"
-                            value=<c:out value="${dto.tno}"></c:out> readonly>
+                            value=<c:out value="${dto.tno}"></c:out> >
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Title</span>
@@ -89,7 +89,7 @@
                             <label class="form-check-label" >
                                 Finished &nbsp;
                             </label>
-                            <input class="form-check-input" type="checkbox" name="finished" ${dto.finished?"checkd":""}>
+                            <input class="form-check-input" type="checkbox" name="finished" ${dto.finished?"checked":""}>
                         </div>
 
                         <div class="my-4">
