@@ -58,14 +58,13 @@
                     </div>
                     <div class="card-body">
                         <form action="/todo/modify" method="post">
-                            <input type="hidden" name="tno" value="${dto.tno}">
                             <input type="hidden" name="page" value="${pageRequestDTO.page}">
                             <input type="hidden" name="size" value="${pageRequestDTO.size}">
 
                         <div class="input-group mb-3">
                             <span class="input-group-text">TNO</span>
                             <input type="text" name="tno" class="form-control"
-                            value=<c:out value="${dto.tno}"></c:out> >
+                            value=<c:out value="${dto.tno}"></c:out> readonly>
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Title</span>
@@ -91,7 +90,7 @@
                             </label>
                             <input class="form-check-input" type="checkbox" name="finished" ${dto.finished?"checked":""}>
                         </div>
-
+                        </form>
                         <div class="my-4">
                             <div class="float-end">
                                 <button type="button" class="btn btn-danger">Remove</button>
@@ -99,7 +98,7 @@
                                 <button type="button" class="btn btn-secondary">List</button>
                             </div>
                         </div>
-                        </form>
+
                     </div>
 
                     <script>
@@ -126,10 +125,8 @@
                         }, false);
 
                         document.querySelector(".btn-primary").addEventListener("click", function (e) {
-
                             e.preventDefault()
                             e.stopPropagation()
-
                             formObj.action = "/todo/modify"
                             formObj.method = "post"
 
