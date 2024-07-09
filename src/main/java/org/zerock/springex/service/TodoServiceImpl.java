@@ -54,7 +54,7 @@ public class TodoServiceImpl implements TodoService {
     }
 
     @Override
-    public TodoDTO getOne(long tno) {
+    public TodoDTO getOne(Long tno) {
 
         TodoVO todoVO = todoMapper.selectOne(tno);
 

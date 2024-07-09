@@ -85,7 +85,7 @@
                             <label class="form-check-label">
                                 Finished &nbsp;
                             </label>
-                            <input type="form-check-input" type="checkbox" name="finished" ${dto.finished?"checked":""} disabled>
+                            <input class="form-check-input" type="checkbox" name="finished" ${dto.finished?"checked":""} disabled>
                         </div>
 
                         <div class="my-4">

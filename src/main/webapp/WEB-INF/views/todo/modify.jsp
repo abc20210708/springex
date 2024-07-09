@@ -90,7 +90,7 @@
                             </label>
                             <input class="form-check-input" type="checkbox" name="finished" ${dto.finished?"checked":""}>
                         </div>
-                        </form>
+
                         <div class="my-4">
                             <div class="float-end">
                                 <button type="button" class="btn btn-danger">Remove</button>
@@ -98,7 +98,7 @@
                                 <button type="button" class="btn btn-secondary">List</button>
                             </div>
                         </div>
-
+                        </form>
                     </div>
 
                     <script>
