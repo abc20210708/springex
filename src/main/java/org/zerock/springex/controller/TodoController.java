@@ -29,6 +29,7 @@ public class TodoController {
         log.info(pageRequestDTO);
 
         if (bindingResult.hasErrors()) {
+            log.info("list Controller hasErrors!!");
             pageRequestDTO = PageRequestDTO.builder().build();
         }
         model.addAttribute("responseDTO", todoService.getList(pageRequestDTO));
@@ -86,16 +87,16 @@ public class TodoController {
     }
 
     @PostMapping("/modify")
-    public String modify(PageRequestDTO pageRequestDTO,
-                        @Valid TodoDTO todoDTO,
-                         BindingResult bindingResult,
-                         RedirectAttributes redirectAttributes) {
+    public String modify(
+            PageRequestDTO pageRequestDTO,
+            @Valid TodoDTO todoDTO,
+            BindingResult bindingResult,
+            RedirectAttributes redirectAttributes){
 
-        if (bindingResult.hasErrors()) {
-            log.info("has errors !");
-            redirectAttributes.addFlashAttribute("errors", bindingResult.getAllErrors());
-
-            redirectAttributes.addAttribute("tno", todoDTO.getTno());
+        if(bindingResult.hasErrors()) {
+            log.info("has errors.......");
+            redirectAttributes.addFlashAttribute("errors", bindingResult.getAllErrors() );
+            redirectAttributes.addAttribute("tno", todoDTO.getTno() );
             return "redirect:/todo/modify";
         }
 
@@ -103,11 +104,10 @@ public class TodoController {
 
         todoService.modify(todoDTO);
 
-        redirectAttributes.addAttribute("page", pageRequestDTO.getPage());
-        redirectAttributes.addAttribute("size", pageRequestDTO.getSize());
+        redirectAttributes.addAttribute("tno", todoDTO.getTno());
 
-
-        return "redirect:/todo/list";
+        return "redirect:/todo/read";
     }
+
 
 }
